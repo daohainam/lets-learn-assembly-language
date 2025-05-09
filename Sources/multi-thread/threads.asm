@@ -3,7 +3,7 @@
 %define SYS_nanosleep 35
 
 section .data
-fmt_msg     db "Thread %d: %d", 10, 0
+fmt_msg     db "Thread %d, Sleep %d", 10, 0
 start_msg   db "Multi-thread demo", 10, 0
 stop_msg    db "Press Ctrl-C to stop...", 10, 0
 stack_size  equ 0x1000
@@ -52,19 +52,20 @@ thread_func:
 .loop:
     push rcx
 
-    ; print: printf("Thread %d: %d\n", thread_id, rcx)
-    mov rdi, fmt_msg
-    mov rsi, rbx        ; thread id
-    mov rdx, rcx
-    call printf
-
     ; sleep random 1–5 seconds
     call rand
-    xor rdx, rdx
+    ;xor rdx, rdx
     mov rcx, 5
-    xor rax, rax
+    ;xor rax, rax
     div rcx             ; rax = rand() / 5, rdx = rand() % 5
     inc rdx             ; 1-5
+
+    push rcx
+    ; print: printf("Thread %d, Sleep %d\n", thread_id, rcx, rdx)
+    mov rdi, fmt_msg
+    mov rsi, rbx        ; thread id
+    call printf
+    pop rcx
 
     ; build timespec
     sub rsp, 16

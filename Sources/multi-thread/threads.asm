@@ -1,15 +1,16 @@
 %define SYS_folk 57
 %define SYS_exit 60
 %define SYS_nanosleep 35
+%define num_threads 10
 
 section .data
-fmt_msg     db "Thread %d, Sleep %d", 10, 0
+fmt_msg     db "[Thread %d] Sleeping %d sec...", 10, 0
+thread_start_msg db "Thread %d started", 10, 0
 start_msg   db "Multi-thread demo", 10, 0
 stop_msg    db "Press Ctrl-C to stop...", 10, 0
-stack_size  equ 0x1000
 
 section .bss
-thread_ids  resq 5
+thread_ids  resq num_threads
 
 section .text
 extern printf
@@ -23,12 +24,12 @@ _start:
     call printf
 
     ; seed rand
-    mov rdi, 12345
+    mov rdi, 0x_cafe_babe
     call srand
 
     mov rbx, 0
 .next_thread:
-    cmp rbx, 10
+    cmp rbx, num_threads
     jge wait_exit
 
     mov rax, SYS_folk
@@ -48,28 +49,29 @@ _start:
 
 ; -----------------------------
 thread_func:
-    mov rcx, 1
-.loop:
-    push rcx
-
-    ; sleep random 1–5 seconds
-    call rand
-    ;xor rdx, rdx
-    mov rcx, 5
-    ;xor rax, rax
-    div rcx             ; rax = rand() / 5, rdx = rand() % 5
-    inc rdx             ; 1-5
-
-    push rcx
-    ; print: printf("Thread %d, Sleep %d\n", thread_id, rcx, rdx)
-    mov rdi, fmt_msg
-    mov rsi, rbx        ; thread id
+    mov rdi, thread_start_msg
+    mov rsi, rbx        ; rbx = thread number (0..n)    
     call printf
-    pop rcx
+    
+.loop:
+
+    ; sleep random 1–10 seconds, rax is now containing a random value
+    call rand
+    xor rdx, rdx
+    mov rcx, 10
+    div rcx             ; rax = rand() / 0, rdx = rand() % 10
+    inc rdx             ; rdx = remainer + 1 
+    add rdx, rbx
+
+    mov r12, rdx
+
+    mov rdi, fmt_msg
+    mov rsi, rbx        
+    call printf
 
     ; build timespec
     sub rsp, 16
-    mov qword [rsp], rdx     ; tv_sec
+    mov qword [rsp], r12     ; tv_sec
     mov qword [rsp+8], 0     ; tv_nsec
     mov rdi, rsp
     xor rsi, rsi
@@ -77,9 +79,6 @@ thread_func:
     syscall
     add rsp, 16
 
-    pop rcx
-
-    inc rcx
     jmp .loop
 
     mov rax, SYS_exit

@@ -64,3 +64,5 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - [Linux System Call Table - Chromium OS](https://www.chromium.org/chromium-os/developer-library/reference/linux-constants/syscalls/)
 - [Assembly Programming Tutorial - tutorialspoint](https://www.tutorialspoint.com/assembly_programming/index.htm)
 - [Debugging with gdb](https://www.eecs.umich.edu/courses/eecs373/readings/Debugger.pdf)
+- [System V Application Binary Interface AMD64 Architecture Processor Supplement](https://cs61.seas.harvard.edu/site/2022/pdf/x86-64-abi-20210928.pdf)
+- [System V ABI - OSDev](https://wiki.osdev.org/System_V_ABI)

@@ -57,3 +57,10 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - Macro
 - Quản lý bộ nhớ
 - Làm việc với hệ thống file
+
+# Tài liệu tham khảo
+- [Intel® 64 and IA-32 Architectures Software Developer's Manual Volume 1: Basic Architecture](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+- [NASM manual](https://www.nasm.us/xdoc/2.16.03/html/nasmdoc0.html)
+- [Linux System Call Table - Chromium OS](https://www.chromium.org/chromium-os/developer-library/reference/linux-constants/syscalls/)
+- [Assembly Programming Tutorial - tutorialspoint](https://www.tutorialspoint.com/assembly_programming/index.htm)
+- [Debugging with gdb](https://www.eecs.umich.edu/courses/eecs373/readings/Debugger.pdf)

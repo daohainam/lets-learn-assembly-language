@@ -1,5 +1,5 @@
 # Let's learn Assembly Language
-Đây là nội dung khóa học ngôn ngữ Assembly AMD64 trên Linux.
+Đây là nội dung khóa học ngôn ngữ Assembly x86_64 trên Linux.
 
 ## Yêu cầu đầu vào:
 - Biết Linux và terminal cơ bản

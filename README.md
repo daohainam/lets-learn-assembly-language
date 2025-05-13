@@ -27,6 +27,7 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - Hello World!
 - Các thành phần trong một chương trình Assembly
 - Bit và các hệ cơ số
+- Các phép toán logic và cổng (gates) 
 - Làm quen với gdb
 - Section (segment)
 	- Tổ chức bộ nhớ của một chương trình

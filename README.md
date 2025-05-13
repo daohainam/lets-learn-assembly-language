@@ -26,8 +26,8 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - Cài đặt môi trường
 - Hello World!
 - Các thành phần trong một chương trình Assembly
-- Bit và các hệ cơ số
-- Các phép toán logic và cổng (gates) 
+- Transistor, các phép toán logic và cổng (gates) 
+- Bit, biểu diễn số và các hệ cơ số
 - Làm quen với gdb
 - Section (segment)
 	- Tổ chức bộ nhớ của một chương trình

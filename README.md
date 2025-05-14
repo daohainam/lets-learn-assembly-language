@@ -36,7 +36,8 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 	- Stack segment
 	- Heap
 - Thanh ghi (giới thiệu, hi/lo)
-  - Các thanh ghi dữ liệu 
+  - Các thanh ghi dữ liệu
+  - Các thanh ghi dấu chấm động
   - Các thanh ghi địa chỉ/con trỏ
   - Các thanh ghi index
   - Các thanh ghi segment (segment trong các chế độ 16/32/64 bit)

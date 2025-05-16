@@ -1,3 +1,9 @@
+extern print_str
+extern str_to_int
+extern int_to_str
+
+global input_buf
+
 section .text
     global _start
 
@@ -84,8 +90,8 @@ exit:
     xor rdi, rdi
     syscall
 
-%include "int-utils.asm"
-%include "io-utils.asm"
+; %include "int-utils.asm"
+; %include "io-utils.asm"
 
 section .rodata
     prompt db 'Enter 10 int64 values:', 0x0A, 0x0D

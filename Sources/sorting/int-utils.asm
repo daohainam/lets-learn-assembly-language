@@ -1,3 +1,9 @@
+global print_str
+global int_to_str
+global str_to_int
+
+extern input_buf
+
 ;-----------------------
 ; Hàm str_to_int: chuỗi -> số
 ; Input: RSI = địa chỉ chuỗi
@@ -50,3 +56,4 @@ int_to_str:
     mov rdx, rcx
     inc rdx                 ; để in cả newline
     ret
+

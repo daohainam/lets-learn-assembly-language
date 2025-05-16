@@ -1,3 +1,5 @@
+global print_str
+
 ;-----------------------
 ; print_str
 ; Input: RDI = địa chỉ chuỗi, RDX = độ dài

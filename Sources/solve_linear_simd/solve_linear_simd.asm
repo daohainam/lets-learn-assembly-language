@@ -3,7 +3,7 @@ extern scanf
 
 section .rodata
     read_format  db "%lf %lf", 0
-    result_msg db "[%d] %lfx + %lf = %lf", 10, 0
+    result_msg db "[%d] %lfx + %lf = 0 => x = %lf", 10, 0
     step_msg   db "Step!", 10, 0
     align 32
     neg_mask: dq 0x8000000000000000, 0x8000000000000000, 0x8000000000000000, 0x8000000000000000

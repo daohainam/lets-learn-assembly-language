@@ -22,7 +22,7 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - Debugging với gdb
 - Sử dụng các hàm libc từ Assembly
 
-## Danh sách bài học (dự kiến)
+## Danh sách bài học
 - [Giới thiệu](https://youtu.be/ISZwMjDWJl4)
 - [Cài đặt môi trường](https://youtu.be/bFLv9VVrFSc)
 - [Viết và biên dịch chương trình Hello World](https://youtu.be/uaDyCNSw7p8)

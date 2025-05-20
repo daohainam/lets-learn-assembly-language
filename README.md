@@ -1,6 +1,8 @@
 # Let's learn Assembly Language
 Đây là nội dung khóa học ngôn ngữ Assembly x86_64 trên Linux.
 
+Xem các video bài giảng tại đây: https://www.youtube.com/playlist?list=PLRLJQuuRRcFndxbUxCtbYt2EOcscuNLoR
+
 ## Yêu cầu đầu vào:
 - Biết Linux và terminal cơ bản
 - Có ý thích tìm hiểu về kiến trúc máy tính

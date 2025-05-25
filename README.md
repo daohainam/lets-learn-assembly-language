@@ -28,7 +28,7 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - [Giới thiệu](https://youtu.be/ISZwMjDWJl4)
 - [Cài đặt môi trường](https://youtu.be/bFLv9VVrFSc)
 - [Viết và biên dịch chương trình Hello World](https://youtu.be/uaDyCNSw7p8)
-- Các thành phần trong một chương trình Assembly
+- [Các thành phần trong một chương trình Assembly](https://youtu.be/nqaedSHwAZY)
 - Transistor, các phép toán logic và cổng (gates) 
 - Bit, biểu diễn số và các hệ cơ số
 - Làm quen với gdb

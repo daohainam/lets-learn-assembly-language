@@ -24,14 +24,20 @@ Học viên sau khi học xong sẽ nắm được kiến thức về các phầ
 - Debugging với gdb
 - Sử dụng các hàm libc từ Assembly
 
-## Danh sách bài học
-- [Giới thiệu](https://youtu.be/ISZwMjDWJl4)
+## Danh sách video
+- [Giới thiệu khóa học](https://youtu.be/ISZwMjDWJl4)
 - [Cài đặt môi trường](https://youtu.be/bFLv9VVrFSc)
 - [Viết và biên dịch chương trình Hello World](https://youtu.be/uaDyCNSw7p8)
 - [Các thành phần trong một chương trình Assembly](https://youtu.be/nqaedSHwAZY)
-- Transistor, các phép toán logic và cổng (gates) 
-- Bit, biểu diễn số và các hệ cơ số
-- Làm quen với gdb
+- [Transistor và các cổng logic](https://youtu.be/vyng-9zvJjw)
+- [Bit và các hệ cơ số](https://youtu.be/wArzO9VbBS4)
+- [Giới thiệu về hệ thống thanh ghi](https://youtu.be/h3x1D8Z6Gbg)
+- [Sử dụng gdb](https://youtu.be/t0NVVOoWBpo)
+- [syscall](https://youtu.be/gefL014dGz8)
+- [Bài tập: Nhập 2 số, tính tổng và in ra màn hình - phần 1](https://youtu.be/JJTuWwFW2nc)
+- [Bài tập: Nhập 2 số, tính tổng và in ra màn hình - phần 2](https://youtu.be/rKNuJ7QJt4Q)
+- [Bài tập: Nhập 2 số, tính tổng và in ra màn hình - phần 3](https://youtu.be/cdmgwjOI5Rc)
+	- Xem tổng kết các lệnh (instruction) đã dùng trong bài tập 1 [tại đây](https://daohainam.com/2025/08/08/tong-hop-cac-ma-lenh-duoc-dung-trong-bai-tap-1-khoa-hoc-kien-truc-may-tinh-va-assembly/)
 - Section (segment)
 	- Tổ chức bộ nhớ của một chương trình
 	- Code segment

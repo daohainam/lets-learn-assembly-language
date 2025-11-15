@@ -41,7 +41,6 @@ section .data
     ; mặc định docroot = "./httpdocs"
     default_docroot db "./httpdocs",0
 
-    ; một số chuỗi HTTP cơ bản
     resp_200      db "HTTP/1.1 200 OK",13,10,0
     resp_404      db "HTTP/1.1 404 Not Found",13,10,0
     resp_400      db "HTTP/1.1 400 Bad Request",13,10,0
@@ -56,7 +55,6 @@ section .data
     crlf          db 13,10,0
     crlf2         db 13,10,13,10,0
 
-    ; một số mime đơn giản
     mime_html db "text/html; charset=utf-8",0
     mime_txt  db "text/plain; charset=utf-8",0
     mime_css  db "text/css; charset=utf-8",0
@@ -81,7 +79,7 @@ section .bss
     fs_path   resb 2048
     num_buf   resb 32
 
-    stat_buf  resb 144        ; struct stat (đủ to)
+    stat_buf  resb 144        ; struct stat
 
 section .text
     global _start

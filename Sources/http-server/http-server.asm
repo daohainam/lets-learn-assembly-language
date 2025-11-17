@@ -24,17 +24,6 @@ section .data
                 "404 Not Found", 10
     http_404_len equ $ - http_404
 
-    ; MIME table: [ext, mimetype]
-    mime_table:
-        db ".html",0,"text/html",0
-        db ".css",0,"text/css",0
-        db ".js",0,"application/javascript",0
-        db ".png",0,"image/png",0
-        db ".jpg",0,"image/jpeg",0
-        db ".jpeg",0,"image/jpeg",0
-        db ".txt",0,"text/plain",0
-        db 0
-
 section .bss
     sockfd     resq 1
     clientfd   resq 1

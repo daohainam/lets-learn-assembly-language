@@ -23,10 +23,11 @@ section .rodata
     resp_400      db "HTTP/1.1 400 Bad Request",13,10,0
     resp_405      db "HTTP/1.1 405 Method Not Allowed",13,10,0
 
-    hdr_server     db "Server: advanced-http-server/0.1",13,10,0
+    hdr_server     db "Server: http-server/0.1",13,10,0
     hdr_conn_close db "Connection: close",13,10,0
-    hdr_ct         db "Content-Type: ",0
-    hdr_cl         db "Content-Length: ",0
+    hdr_c_type     db "Content-Type: ",0
+    hdr_c_length   db "Content-Length: ",0
+    hdr_c_encoding db "Content-Encoding: gzip",13,10,0
 
     crlf           db 13,10,0
     crlf2          db 13,10,13,10,0
@@ -623,12 +624,13 @@ handle_client:
     mov rdi, r15
     mov rsi, hdr_server
     call write_z
+
     mov rdi, r15
-    mov rsi, crlf
+    mov rsi, hdr_c_encoding
     call write_z
 
     mov rdi, r15
-    mov rsi, hdr_ct
+    mov rsi, hdr_c_type
     call write_z
     mov rdi, r15
     lea rsi, [mime_buf]
@@ -638,7 +640,7 @@ handle_client:
     call write_z
 
     mov rdi, r15
-    mov rsi, hdr_cl
+    mov rsi, hdr_c_length
     call write_z
 
     mov rax, r14
@@ -653,9 +655,6 @@ handle_client:
 
     mov rdi, r15
     mov rsi, hdr_conn_close
-    call write_z
-    mov rdi, r15
-    mov rsi, crlf
     call write_z
 
     mov rdi, r15
